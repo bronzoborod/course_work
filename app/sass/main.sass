@@ -15,6 +15,10 @@ nav
   color: $basic_color
   position: fixed
   z-index: 100
+  font-size: 13px
+  font-weight: 600
+  letter-spacing: 0.7px
+  height: 60px
   .menu_trigger
     text-align: center
     display: none
@@ -31,6 +35,11 @@ nav
   a:hover
     background-color: $details_1
     color: $first
+    text-decoration: none
+  a:visited
+    color: $basic_color
+    text-decoration: none
+  a:active
     text-decoration: none
   #lastA_libs
     background-color: $first
@@ -59,8 +68,12 @@ nav
     .menu_trigger
       display: block
       border-bottom: 1px solid $basic_color
+      text-decoration: none
+    //a:visited
+    //  color: $basic_color
     ul
       display: none
+      background-color: $first
       li
         display: block
         text-align: center
@@ -133,23 +146,61 @@ nav
   padding-left: 10px
   .content_indent_right
     margin-top: 80px
-    background-color: $details_1
     position: static
     .search_function
+      background-color: $details_1
+      //border-radius: 5px
+      //box-shadow: 3px 3px 2px rgba(150, 150, 150, 1)
       p
         margin: 0 0
-      input
-        width: 80%
-        padding: 5px 10px
-        margin: 10px 15% 10px 5%
-      select
-        width: 80%
-        padding: 5px 10px
-        margin: 10px 15% 10px 5%
-      button
-        width: 80%
-        padding: 5px 10px
-        margin: 10px 15% 10px 5%
+        font-size: 16px
+        font-weight: 600
+        color: $basic_color
+        padding: 10px 15px 0px 15px
+        letter-spacing: 0.7px
+        //color: $text
+      .choiсe_search
+        width: 84%
+        padding: 2px 15px
+        margin: 10px 8% 5px 8%
+        background-color: $basic_color
+        border: 1px solid $second
+        color: $text
+      .option_hover:hover
+        background-color: $details_1
+      .option_hover:checked
+        background-color: $details_1
+      .entry_search
+        width: 84%
+        padding: 2px 15px
+        margin: 5px 8% 5px 8%
+        background-color: $basic_color
+        border: 1px solid $second
+        color: $text
+      .submit_search
+        width: 84%
+        padding: 2px 15px
+        margin: 10px 8% 10px 8%
+        background-color: $basic_color
+        border: 1px solid $second
+        color: $text
+      .submit_search:hover
+        background-color: $second
+        border: 1px solid $basic_color
+        color: $basic_color
+    .add_item
+      margin-top: 30px
+      .button_add_item
+        width: 100%
+        padding: 10px 30px
+        background-color: $second
+        border: 1px solid $second
+        font-weight: 600
+        letter-spacing: 0.7px
+      .button_add_item:hover
+        background-color: $first
+        color: $basic_color
+        border: 1px solid $details_1
 
 
 

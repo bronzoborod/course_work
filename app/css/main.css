@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #eef5ee;
   margin: 0 0;
@@ -12,7 +13,11 @@ nav {
   text-transform: uppercase;
   color: #eef5ee;
   position: fixed;
-  z-index: 100; }
+  z-index: 100;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  height: 60px; }
   nav .menu_trigger {
     text-align: center;
     display: none; }
@@ -29,6 +34,11 @@ nav {
   nav a:hover {
     background-color: #b5d1f1;
     color: #244769;
+    text-decoration: none; }
+  nav a:visited {
+    color: #eef5ee;
+    text-decoration: none; }
+  nav a:active {
     text-decoration: none; }
   nav #lastA_libs {
     background-color: #244769;
@@ -56,9 +66,11 @@ nav {
     padding: 0 0; }
     nav .menu_trigger {
       display: block;
-      border-bottom: 1px solid #eef5ee; }
+      border-bottom: 1px solid #eef5ee;
+      text-decoration: none; }
     nav ul {
-      display: none; }
+      display: none;
+      background-color: #244769; }
       nav ul li {
         display: block;
         text-align: center; }
@@ -129,19 +141,55 @@ nav {
   padding-left: 10px; }
   .function .content_indent_right {
     margin-top: 80px;
-    background-color: #b5d1f1;
     position: static; }
-    .function .content_indent_right .search_function p {
-      margin: 0 0; }
-    .function .content_indent_right .search_function input {
-      width: 80%;
-      padding: 5px 10px;
-      margin: 10px 15% 10px 5%; }
-    .function .content_indent_right .search_function select {
-      width: 80%;
-      padding: 5px 10px;
-      margin: 10px 15% 10px 5%; }
-    .function .content_indent_right .search_function button {
-      width: 80%;
-      padding: 5px 10px;
-      margin: 10px 15% 10px 5%; }
+    .function .content_indent_right .search_function {
+      background-color: #b5d1f1; }
+      .function .content_indent_right .search_function p {
+        margin: 0 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #eef5ee;
+        padding: 10px 15px 0px 15px;
+        letter-spacing: 0.7px; }
+      .function .content_indent_right .search_function .choiсe_search {
+        width: 84%;
+        padding: 2px 15px;
+        margin: 10px 8% 5px 8%;
+        background-color: #eef5ee;
+        border: 1px solid #c1cc9c;
+        color: #081822; }
+      .function .content_indent_right .search_function .option_hover:hover {
+        background-color: #b5d1f1; }
+      .function .content_indent_right .search_function .option_hover:checked {
+        background-color: #b5d1f1; }
+      .function .content_indent_right .search_function .entry_search {
+        width: 84%;
+        padding: 2px 15px;
+        margin: 5px 8% 5px 8%;
+        background-color: #eef5ee;
+        border: 1px solid #c1cc9c;
+        color: #081822; }
+      .function .content_indent_right .search_function .submit_search {
+        width: 84%;
+        padding: 2px 15px;
+        margin: 10px 8% 10px 8%;
+        background-color: #eef5ee;
+        border: 1px solid #c1cc9c;
+        color: #081822; }
+      .function .content_indent_right .search_function .submit_search:hover {
+        background-color: #c1cc9c;
+        border: 1px solid #eef5ee;
+        color: #eef5ee; }
+    .function .content_indent_right .add_item {
+      margin-top: 30px; }
+      .function .content_indent_right .add_item .button_add_item {
+        width: 100%;
+        padding: 10px 30px;
+        background-color: #c1cc9c;
+        border: 1px solid #c1cc9c;
+        font-weight: 600;
+        letter-spacing: 0.7px; }
+      .function .content_indent_right .add_item .button_add_item:hover {
+        background-color: #244769;
+        color: #eef5ee;
+        border: 1px solid #b5d1f1; }
