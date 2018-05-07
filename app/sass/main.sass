@@ -12,7 +12,7 @@ nav
   margin-left: auto
   margin-right: auto
   text-transform: uppercase
-  color: $details_1
+  color: $basic_color
   .menu_trigger
     text-align: center
     display: none
@@ -25,22 +25,22 @@ nav
     display: block
     text-decoration: none
     padding: 20px
-    color: $details_1
+    color: $basic_color
   a:hover
     background-color: $details_1
     color: $first
   #lastA_libs
     background-color: $first
-    color: $details_1
+    color: $basic_color
     cursor: default
   #brand_course
     padding-right: 40px
 
 @media screen and (min-width: 992px)
   .navbar_content
-  max-width: 960px
-  margin-left: auto
-  margin-right: auto
+    max-width: 960px
+    margin-left: auto
+    margin-right: auto
 
 @media screen and (min-width: 1200px)
   .navbar_content
@@ -74,9 +74,40 @@ nav
   padding: 20px 0
 
 .content
-  background-color: $second
+  padding: 0 0
+  padding-right: 10px
+  .content_indent_left
+    .date
+      background-color: $details_1
+      width: 100%
+      text-align: right
+      margin-bottom: 20px
+    .block_content
+      width: 100%
+      .content_item
+        background-color: #fff
+        margin-bottom: 20px
+        h1
+          padding: 15px 15px
+          color: $text
+        p
+          padding: 10px 10px
+        img
+          width: 100%
+          padding: 0 0
+          margin: 0 0
+      .content_item:hover
+        border: 1px solid $details_1
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+        h1
+          padding: 15px 15px
+          margin: 0 0
 
 .function
-  background-color: $first
+  padding: 0 0
+  padding-left: 10px
+  .content_indent_right
+    background-color: $details_1
+
 
 

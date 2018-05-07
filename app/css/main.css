@@ -10,7 +10,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
-  color: #b5d1f1; }
+  color: #eef5ee; }
   nav .menu_trigger {
     text-align: center;
     display: none; }
@@ -23,21 +23,22 @@ nav {
     display: block;
     text-decoration: none;
     padding: 20px;
-    color: #b5d1f1; }
+    color: #eef5ee; }
   nav a:hover {
     background-color: #b5d1f1;
     color: #244769; }
   nav #lastA_libs {
     background-color: #244769;
-    color: #b5d1f1;
+    color: #eef5ee;
     cursor: default; }
   nav #brand_course {
     padding-right: 40px; }
 
 @media screen and (min-width: 992px) {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto; }
+  .navbar_content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; } }
 
 @media screen and (min-width: 1200px) {
   .navbar_content {
@@ -71,7 +72,37 @@ nav {
   padding: 20px 0; }
 
 .content {
-  background-color: #c1cc9c; }
+  padding: 0 0;
+  padding-right: 10px; }
+  .content .content_indent_left .date {
+    background-color: #b5d1f1;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px; }
+  .content .content_indent_left .block_content {
+    width: 100%; }
+    .content .content_indent_left .block_content .content_item {
+      background-color: #fff;
+      margin-bottom: 20px; }
+      .content .content_indent_left .block_content .content_item h1 {
+        padding: 15px 15px;
+        color: #081822; }
+      .content .content_indent_left .block_content .content_item p {
+        padding: 10px 10px; }
+      .content .content_indent_left .block_content .content_item img {
+        width: 100%;
+        padding: 0 0;
+        margin: 0 0; }
+    .content .content_indent_left .block_content .content_item:hover {
+      border: 1px solid #b5d1f1;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+      .content .content_indent_left .block_content .content_item:hover h1 {
+        padding: 15px 15px;
+        margin: 0 0; }
 
 .function {
-  background-color: #244769; }
+  padding: 0 0;
+  padding-left: 10px; }
+  .function .content_indent_right {
+    background-color: #b5d1f1; }
