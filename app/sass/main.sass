@@ -1,0 +1,82 @@
+@import "color"
+
+body
+  background-color: $basic_color
+  margin: 0 0
+  font-family: Arial, sans-serif
+
+nav
+  width: 100%
+  background-color: $first
+  padding: 0 15px
+  margin-left: auto
+  margin-right: auto
+  text-transform: uppercase
+  color: $details_1
+  .menu_trigger
+    text-align: center
+    display: none
+  ul
+    padding: 0 0
+    margin: 0 0
+    li
+      display: inline-block
+  a
+    display: block
+    text-decoration: none
+    padding: 20px
+    color: $details_1
+  a:hover
+    background-color: $details_1
+    color: $first
+  #lastA_libs
+    background-color: $first
+    color: $details_1
+    cursor: default
+  #brand_course
+    padding-right: 40px
+
+@media screen and (min-width: 992px)
+  .navbar_content
+  max-width: 960px
+  margin-left: auto
+  margin-right: auto
+
+@media screen and (min-width: 1200px)
+  .navbar_content
+    max-width: 1140px
+    margin-left: auto
+    margin-right: auto
+
+@media screen and (max-width: 768px)
+  nav
+    padding: 0 0
+    .menu_trigger
+      display: block
+      border-bottom: 1px solid $basic_color
+    ul
+      display: none
+      li
+        display: block
+        text-align: center
+        a
+          border-bottom: 1px solid $basic_color
+    #brand_course
+      display: none
+    #lastA_libs
+      background-color: $details_1
+      color: $first
+
+.bg-light
+  background-color: $first !important
+
+.basic_content
+  padding: 20px 0
+
+.content
+  background-color: $second
+
+.function
+  background-color: $first
+
+
