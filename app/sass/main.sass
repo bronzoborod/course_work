@@ -13,6 +13,8 @@ nav
   margin-right: auto
   text-transform: uppercase
   color: $basic_color
+  position: fixed
+  z-index: 100
   .menu_trigger
     text-align: center
     display: none
@@ -29,12 +31,15 @@ nav
   a:hover
     background-color: $details_1
     color: $first
+    text-decoration: none
   #lastA_libs
     background-color: $first
     color: $basic_color
     cursor: default
+    padding: 20px
   #brand_course
     padding-right: 40px
+    cursor: default
 
 @media screen and (min-width: 992px)
   .navbar_content
@@ -71,11 +76,12 @@ nav
   background-color: $first !important
 
 .basic_content
-  padding: 20px 0
+  padding: 0px 0px 10px 0px
 
 .content
   padding: 0 0
   padding-right: 10px
+  margin-top: 80px
   .content_indent_left
     .date
       background-color: $details_1
@@ -88,26 +94,62 @@ nav
         background-color: #fff
         margin-bottom: 20px
         h1
-          padding: 15px 15px
-          color: $text
+          padding: 40px 15px 0px 15px
+          font-size: 26px
+          margin: 0 0
+          color: rgba(8, 24, 34, 0.5)
         p
-          padding: 10px 10px
-        img
-          width: 100%
+          padding: 20px 20px
+          font-size: 16px
+          margin: 0 0
+          color: rgba(8, 24, 34, 0.7)
+        .content_image
           padding: 0 0
           margin: 0 0
+          img
+            width: 100%
+            padding: 0 0
+            margin: 0 0
       .content_item:hover
-        border: 1px solid $details_1
-        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+        //border: 1px solid $details_1
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
         h1
-          padding: 15px 15px
-          margin: 0 0
+          padding: 40px 15px 0px 15px
+          color: rgba(8, 24, 34, 0.8)
+        p
+          padding: 20px 20px
+          color: rgba(8, 24, 34, 1)
+
+.affix
+  top: 0
+@media (max-width: 1200px)
+  .affix
+    position: static
+
+
 
 .function
   padding: 0 0
   padding-left: 10px
   .content_indent_right
+    margin-top: 80px
     background-color: $details_1
+    position: static
+    .search_function
+      p
+        margin: 0 0
+      input
+        width: 80%
+        padding: 5px 10px
+        margin: 10px 15% 10px 5%
+      select
+        width: 80%
+        padding: 5px 10px
+        margin: 10px 15% 10px 5%
+      button
+        width: 80%
+        padding: 5px 10px
+        margin: 10px 15% 10px 5%
 
 
 

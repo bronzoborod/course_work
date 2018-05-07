@@ -10,7 +10,9 @@ nav {
   margin-left: auto;
   margin-right: auto;
   text-transform: uppercase;
-  color: #eef5ee; }
+  color: #eef5ee;
+  position: fixed;
+  z-index: 100; }
   nav .menu_trigger {
     text-align: center;
     display: none; }
@@ -26,13 +28,16 @@ nav {
     color: #eef5ee; }
   nav a:hover {
     background-color: #b5d1f1;
-    color: #244769; }
+    color: #244769;
+    text-decoration: none; }
   nav #lastA_libs {
     background-color: #244769;
     color: #eef5ee;
-    cursor: default; }
+    cursor: default;
+    padding: 20px; }
   nav #brand_course {
-    padding-right: 40px; }
+    padding-right: 40px;
+    cursor: default; }
 
 @media screen and (min-width: 992px) {
   .navbar_content {
@@ -69,11 +74,12 @@ nav {
   background-color: #244769 !important; }
 
 .basic_content {
-  padding: 20px 0; }
+  padding: 0px 0px 10px 0px; }
 
 .content {
   padding: 0 0;
-  padding-right: 10px; }
+  padding-right: 10px;
+  margin-top: 80px; }
   .content .content_indent_left .date {
     background-color: #b5d1f1;
     width: 100%;
@@ -85,24 +91,57 @@ nav {
       background-color: #fff;
       margin-bottom: 20px; }
       .content .content_indent_left .block_content .content_item h1 {
-        padding: 15px 15px;
-        color: #081822; }
+        padding: 40px 15px 0px 15px;
+        font-size: 26px;
+        margin: 0 0;
+        color: rgba(8, 24, 34, 0.5); }
       .content .content_indent_left .block_content .content_item p {
-        padding: 10px 10px; }
-      .content .content_indent_left .block_content .content_item img {
-        width: 100%;
+        padding: 20px 20px;
+        font-size: 16px;
+        margin: 0 0;
+        color: rgba(8, 24, 34, 0.7); }
+      .content .content_indent_left .block_content .content_item .content_image {
         padding: 0 0;
         margin: 0 0; }
+        .content .content_indent_left .block_content .content_item .content_image img {
+          width: 100%;
+          padding: 0 0;
+          margin: 0 0; }
     .content .content_indent_left .block_content .content_item:hover {
-      border: 1px solid #b5d1f1;
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+      -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
       .content .content_indent_left .block_content .content_item:hover h1 {
-        padding: 15px 15px;
-        margin: 0 0; }
+        padding: 40px 15px 0px 15px;
+        color: rgba(8, 24, 34, 0.8); }
+      .content .content_indent_left .block_content .content_item:hover p {
+        padding: 20px 20px;
+        color: #081822; }
+
+.affix {
+  top: 0; }
+
+@media (max-width: 1200px) {
+  .affix {
+    position: static; } }
 
 .function {
   padding: 0 0;
   padding-left: 10px; }
   .function .content_indent_right {
-    background-color: #b5d1f1; }
+    margin-top: 80px;
+    background-color: #b5d1f1;
+    position: static; }
+    .function .content_indent_right .search_function p {
+      margin: 0 0; }
+    .function .content_indent_right .search_function input {
+      width: 80%;
+      padding: 5px 10px;
+      margin: 10px 15% 10px 5%; }
+    .function .content_indent_right .search_function select {
+      width: 80%;
+      padding: 5px 10px;
+      margin: 10px 15% 10px 5%; }
+    .function .content_indent_right .search_function button {
+      width: 80%;
+      padding: 5px 10px;
+      margin: 10px 15% 10px 5%; }

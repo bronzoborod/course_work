@@ -8,4 +8,13 @@ $(document).ready(function() {
             $('nav ul').removeAttr('style');
         }
     });//end resize
+
+    $(function () {
+        $('#myAffix').width($('#left').width());
+        $(window).resize(function () {
+            $('#myAffix').width($('#left').width());
+        });
+    });
+
 });//end ready
+
