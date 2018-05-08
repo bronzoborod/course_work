@@ -14,7 +14,20 @@ $(document).ready(function() {
         $(window).resize(function () {
             $('#myAffix').width($('#left').width());
         });
+    });// end static seatch
+
+    $(function () {
+        $('#modal_date_popup').click(function () {
+            $('.popup_date').fadeIn(300)
+        });
+
     });
+
+    $(document).click(function (event) {
+        if ($(event.target).closest('#modal_date_popup').length || $(event.target).closest('.popup_date').length) return;
+        $('.popup_date').fadeOut(500)
+        event.stopPropagation();
+    })
 
 });//end ready
 

@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Архитектура</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -31,7 +33,20 @@
 
                 <div class="content_indent_left">
                     <div class="date">
-                        выбрать дату
+                            <a href="#"  id="modal_date_popup"> выбрать дату <i class="far fa-calendar-alt"></i> </a>
+                        <div class="popup_date">
+                            <div class="button_group">
+                                <span>За</span>
+                                <button>Сегодня</button>
+                                <button>Вчера</button>
+                                <button>Неделю</button>
+                                <button>Месяц</button>
+                            </div>
+                            <div class="form_group">
+                                <div class="time_value"><span class="time_indent_s">с</span><input type="date"> <span class="time_indent_p">по</span> <input type="date"></div>
+                                <div class="time_submit"><button type="submit" class="style_button">Показать</button></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="block_content">
@@ -107,15 +122,23 @@
                     <div class="content_indent_right">
 
                         <div class="search_function">
-                            <form action="">
+                            <form action="" class="mysearch">
                                 <p>Поиск: </p>
-                                <select name="search" class="choiсe_search">
-                                    <option disabled selected>Выберите критерий</option>
+                                <select name="search" class="form-control input-sm choiсe_search">
+                                    <option disabled selected class="disabled_selected">Выберите критерию</option>
                                     <option value="city" class="option_hover">Город</option>
                                     <option value="name" class="option_hover">Название</option>
                                 </select>
-                                <input type="text" class="entry_search">
-                                <button type="submit" class="submit_search">Искать</button>
+                                <!--<input type="text" class="entry_search">-->
+                                <div class="input-group mystytle_group">
+                                    <input type="text" class="form-control" id="exampleInputAmount"
+                                           placeholder="Amount">
+                                    <div class="input-group-addon myclass_button">
+                                        <button type="submit" class="submit_search"><i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
                             </form>
                         </div>
 
@@ -134,9 +157,11 @@
     </div>
 </div>
 
+
 <hr>
 
 <footer>
+
     hello world
 </footer>
 

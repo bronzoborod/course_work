@@ -1,7 +1,7 @@
 @import "color"
 
 body
-  background-color: $basic_color
+  background-color: $body_color
   margin: 0 0
   font-family: Arial, sans-serif
 
@@ -101,6 +101,16 @@ nav
       width: 100%
       text-align: right
       margin-bottom: 20px
+      padding: 10px 20px
+      a
+        font-size: 16px
+        text-decoration: none
+        color: $first
+        i
+          padding-left: 10px
+      a:hover
+        text-decoration: none
+        color: $basic_color
     .block_content
       width: 100%
       .content_item
@@ -124,7 +134,6 @@ nav
             padding: 0 0
             margin: 0 0
       .content_item:hover
-        //border: 1px solid $details_1
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
         h1
           padding: 40px 15px 0px 15px
@@ -149,45 +158,55 @@ nav
     position: static
     .search_function
       background-color: $details_1
-      //border-radius: 5px
-      //box-shadow: 3px 3px 2px rgba(150, 150, 150, 1)
+      padding-bottom: 30px
       p
         margin: 0 0
-        font-size: 16px
-        font-weight: 600
-        color: $basic_color
-        padding: 10px 15px 0px 15px
-        letter-spacing: 0.7px
-        //color: $text
+        font-size: 18px
+        color: $first
+        padding: 10px 15px 10px 15px
       .choiсe_search
-        width: 84%
-        padding: 2px 15px
-        margin: 10px 8% 5px 8%
-        background-color: $basic_color
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        //padding: 6px 12px
         border: 1px solid $second
+        font-size: 14px
         color: $text
-      .option_hover:hover
-        background-color: $details_1
-      .option_hover:checked
-        background-color: $details_1
-      .entry_search
-        width: 84%
-        padding: 2px 15px
-        margin: 5px 8% 5px 8%
-        background-color: $basic_color
-        border: 1px solid $second
-        color: $text
-      .submit_search
-        width: 84%
-        padding: 2px 15px
-        margin: 10px 8% 10px 8%
-        background-color: $basic_color
-        border: 1px solid $second
-        color: $text
-      .submit_search:hover
-        background-color: $second
-        border: 1px solid $basic_color
+        margin-bottom: 20px
+        border-radius: 0
+        option
+          font-size: 14px
+      .mystytle_group
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        input
+          border-radius: 0
+        .myclass_button
+          padding: 0 0
+          margin: 0 0
+          //border-radius: 0 25px 25px 0
+          border: 0
+          background-color: rgba($basic_color, 0.01)
+          .submit_search
+            padding: 9px 8px
+            width: 100%
+            height: 100%
+            margin: 0 0
+            font-size: 14px
+            border-radius: 0 25px 25px 0
+            background-color: #fff
+            border: 1px solid $second
+            border-left: 0
+            color: $text
+          .submit_search:hover
+            background-color: $first
+            color: $basic_color
+            border: 1px solid $details_1
+    .search_function:hover
+      p
         color: $basic_color
+        cursor: default
     .add_item
       margin-top: 30px
       .button_add_item
@@ -202,5 +221,64 @@ nav
         color: $basic_color
         border: 1px solid $details_1
 
+.popup_date
+  color: $text
+  background-color: $first
+  position: absolute
+  right: 30px
+  top: 50px
+  display: none
+  .button_group
+    padding: 15px 30px
+    color: $basic_color
+    button
+      background-color: rgba(0,0,0, 0.01)
+      border: 0
+      border-bottom: 2px solid $first
+    button:hover
+      border-bottom: 2px solid $details_1
+  .form_group
+    background-color: $basic_color
+    border-right: 1px solid $first
+    border-left: 1px solid $first
+    border-bottom: 1px solid $first
+    display: flex
+    flex-direction: column
+    align-items: center
+    .time_value
+      margin-top: 20px
+      margin-bottom: 20px
+      .time_indent_s
+        padding-right: 5px
+      .time_indent_p
+        padding-right: 5px
+        padding-left: 15px
+    .style_button
+      margin-bottom: 20px
+      padding: 4px 40px
+      background-color: $second
+      border: 1px solid $first
+      letter-spacing: 1px
+    .style_button:hover
+      background-color: $first
+      color: $basic_color
+.popup_date::before
+  content: ''
+  position: absolute /* Абсолютное позиционирование */
+  right: 20px
+  top: -40px /* Положение треугольника */
+  border: 20px solid transparent
+  border-bottom: 20px solid $first
 
 
+hr
+  border: none
+  width: 100%
+  height: 50px
+  margin-top: 0
+  border-bottom: 1px solid rgba(36, 71, 105, 0.6)
+  box-shadow: 0 20px 20px -20px  $first
+  margin: 0
+
+footer
+  height: 120px
