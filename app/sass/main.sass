@@ -27,6 +27,10 @@ nav
     margin: 0 0
     li
       display: inline-block
+    .nav_kind
+      .nav_kind_view
+        display: none
+        position: absolute
   a
     display: block
     text-decoration: none
@@ -49,6 +53,26 @@ nav
   #brand_course
     padding-right: 40px
     cursor: default
+    i
+      padding-right: 10px
+      font-size: 20px
+
+.nav_kind:hover
+  .nav_kind_view
+    display: block
+    background-color: $first
+    li
+      display: block
+      padding: 0px 0px
+      a
+        padding: 20px 20px
+        border-bottom: 1px solid $first
+        border-right: 1px solid $first
+        border-left:  1px solid $first
+      a:hover
+        padding: 20px 20px
+        background-color: $details_1
+        border-bottom: 1px solid $first
 
 @media screen and (min-width: 992px)
   .navbar_content
@@ -62,28 +86,49 @@ nav
     margin-left: auto
     margin-right: auto
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 992px)
+  .function
+    padding-left: 0px !important
+  .content_item
+    margin-left: 10px !important
+
+@media screen and (max-width: 830px)
   nav
     padding: 0 0
-    .menu_trigger
-      display: block
-      border-bottom: 1px solid $basic_color
-      text-decoration: none
-    //a:visited
-    //  color: $basic_color
-    ul
-      display: none
+    .navbar_content
       background-color: $first
-      li
+      .menu_trigger
         display: block
-        text-align: center
-        a
+        border-bottom: 1px solid $basic_color
+        text-decoration: none
+      i
+        padding-right: 10px
+        font-size: 20px
+      ul
+        display: none
+        background-color: $first
+        li
+          display: block
+          text-align: center
+          a
+            border-bottom: 1px solid $basic_color
+            text-decoration: none
+      #brand_course
+        display: none
+      #lastA_libs
+        background-color: $details_1
+        color: $first
+    .nav_kind
+      .nav_kind_view
+        display: none
+        li
+          display: block
+          text-align: left
           border-bottom: 1px solid $basic_color
-    #brand_course
-      display: none
-    #lastA_libs
-      background-color: $details_1
-      color: $first
+          border-right: 1px solid $basic_color
+          padding: 0 0
+          a
+            padding: 14px 20px !important
 
 .bg-light
   background-color: $first !important
@@ -116,16 +161,35 @@ nav
       .content_item
         background-color: #fff
         margin-bottom: 20px
+        transition: all 0.7s
         h1
-          padding: 40px 15px 0px 15px
+          padding: 20px 15px 0px 15px
           font-size: 26px
           margin: 0 0
           color: rgba(8, 24, 34, 0.5)
         p
-          padding: 20px 20px
+          padding: 10px 20px 20px 20px
           font-size: 16px
           margin: 0 0
           color: rgba(8, 24, 34, 0.7)
+          text-indent: 1.5em
+        .item_info
+          padding: 5px 0px 5px 0px
+          color: $second
+          span
+            color: rgba(8, 24, 34, 0.5)
+            padding-left: 10px
+        .item_info:last-of-type
+          padding-bottom: 0px
+        .item_info:first-of-type
+          padding-top: 20px
+        .item_info_assessment
+          display: none
+          text-align: right
+          padding: 0 20px 10px 0px
+          color: $second
+          span
+            color: rgba(8, 24, 34, 0.5)
         .content_image
           padding: 0 0
           margin: 0 0
@@ -133,22 +197,71 @@ nav
             width: 100%
             padding: 0 0
             margin: 0 0
+        .footer_item
+          width: 100%
+          .left_f
+            float: left
+            width: 70%
+            text-align: left
+            padding: 3px 0px 3px 5px
+            color: $second
+            cursor: default
+            i
+              padding-right: 10px
+          .right_f
+            width: 100%
+            text-align: right
+            padding: 3px 5px 3px 0px
+            color: rgba(8, 24, 34, 0.5)
+      .content_item:last-of-type
+        padding-bottom: 0px
       .content_item:hover
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.5)
         h1
-          padding: 40px 15px 0px 15px
+          padding: 20px 15px 0px 15px
           color: rgba(8, 24, 34, 0.8)
         p
-          padding: 20px 20px
+          padding: 10px 20px 20px 20px
           color: rgba(8, 24, 34, 1)
+        .item_info
+          padding: 5px 0px 5px 0px
+          color: $second
+          span
+            color: rgba(8, 24, 34, 0.8)
+            padding-left: 10px
+        .item_info:last-of-type
+          padding-bottom: 0px
+        .item_info:first-of-type
+          padding-top: 20px
+        .item_info_assessment
+          padding: 0 20px 10px 0px
+          color: $second
+          span
+            color: rgba(8, 24, 34, 0.8)
 
 .affix
   top: 0
-@media (max-width: 1200px)
+@media (max-width: 991px)
   .affix
     position: static
 
-
+@media screen and (max-width: 400px)
+  .popup_date
+    width: 270px
+    .button_group
+      padding: 10px 2px !important
+      color: $basic_color
+      button
+        background-color: rgba(0,0,0, 0.01)
+        border: 0
+        border-bottom: 2px solid $first
+        padding: 4px 8px
+    span
+      display: block
+      padding-left: 10px !important
+      text-align: left
+    input
+      width: 140px
 
 .function
   padding: 0 0
@@ -239,9 +352,9 @@ nav
       border-bottom: 2px solid $details_1
   .form_group
     background-color: $basic_color
-    border-right: 1px solid $first
-    border-left: 1px solid $first
-    border-bottom: 1px solid $first
+    //border-right: 1px solid $first
+    //border-left: 1px solid $first
+    //border-bottom: 1px solid $first
     display: flex
     flex-direction: column
     align-items: center
@@ -266,19 +379,34 @@ nav
   content: ''
   position: absolute /* Абсолютное позиционирование */
   right: 20px
-  top: -40px /* Положение треугольника */
-  border: 20px solid transparent
-  border-bottom: 20px solid $first
+  top: -32px /* Положение треугольника */
+  border: 16px solid transparent
+  border-bottom: 16px solid $first
 
 
 hr
   border: none
   width: 100%
-  height: 50px
+  height: 30px
   margin-top: 0
-  border-bottom: 1px solid rgba(36, 71, 105, 0.6)
-  box-shadow: 0 20px 20px -20px  $first
+  box-shadow: 0 10px 10px -10px  $first
   margin: 0
 
 footer
   height: 120px
+  display: flex
+  flex-direction: row
+  align-items: center
+  .left_footer_content
+    font-size: 18px
+    color: $first
+    padding: 10px 0px
+    margin-top: 15px
+  .right_footer_content
+    text-align: right
+    font-size: 16px
+    i
+      font-size: 20px
+      color: $second
+    i:hover
+      color: $first
